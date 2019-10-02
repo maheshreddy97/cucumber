@@ -38,11 +38,11 @@ public class DemoGuru {
 	public void user_verifies_whether_customer_id_is_displayed() {
 		WebElement txt = driver.findElement(By.xpath("//b[text()='Please Note Down Your CustomerID']"));
 		String text = txt.getText();
-		if(text.equals("Please Note Down Your CustomerID")) {
-			System.out.println("customer added successfully");
+		if(text.contains("CustomerID")) {
+			System.out.println("success");
 		}
 		else {
-			System.out.println("customer not added");
+			System.out.println("failed");
 		}
 	   
 	    
